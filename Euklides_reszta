@@ -31,7 +31,9 @@ Wykonaj zamianę 𝑚←𝑛, 𝑛←𝑟 i wróć do kroku1.
                 int r=abc%xyz;      //oblicza resztę z dzielenia 
                 abc=xyz;            //wykonuje zamianę abc←xyz
                 xyz=r;              //wykonuje zamianę xyz←r
-            } 
+         } 
+         
+         printf("Największy wspólny dzielnik to: %d", xyz);
             
     return 0;
 }
