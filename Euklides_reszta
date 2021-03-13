@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int main()
+{
+    int abc , xyz;
+    printf("Podaj liczby po spacji:");
+    scanf("%d %d",&abc, &xyz);
+    printf("Twoja liczby to: %d %d\n",abc, xyz);
+    int r;
+    
+    
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
+/*
+KROK 1
+Podziel 𝑚 przez 𝑛 i niech 𝑟 oznacza resztę z tego dzielenia.  "m" to "abc", "n" to "xyz"
+KROK 2
+Jeśli reszta 𝑟=0, zakończ algorytm; odpowiedzią jest 𝑛.
+KROK 3
+Wykonaj zamianę 𝑚←𝑛, 𝑛←𝑟 i wróć do kroku1.
+*/
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////   
+
+
+        if(abc>xyz){                //gdy abc jest większe niż xyz
+            
+            while(abc%xyz!=0){      //sprawdza czy reszta to 0
+                
+                int r=abc%xyz;      //oblicza resztę z dzielenia
+                printf("%d\n",r);   
+                abc=xyz;            //wykonuje zamianę abc←xyz
+                printf("%d\n",abc);
+                xyz=r;              //wykonuje zamianę xyz←r
+                printf("%d\n\n\n",xyz);
+            }
+            
+        printf("Największy wspólny dzielnik to: %d",xyz);
+        }
+        
+        else                        //gdy xyz>abc albo są równe sobie
+        {
+            while(xyz%abc!=0){      //sprawdza czy reszta to 0
+                
+                int r=xyz%abc;      //oblicza resztę z dzielenia
+                printf("%d\n",r);
+                xyz=abc;            //wykonuje zamianę xyz←abc
+                printf("%d\n",xyz);         
+                abc=r;              //wykonuje zamianę abc←r
+                printf("%d\n\n\n",abc);
+            }
+            
+        printf("Największy wspólny dzielnik to: %d",abc);    
+        }
+        
+    return 0;
+}
