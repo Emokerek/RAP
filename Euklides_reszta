@@ -28,15 +28,10 @@ Wykonaj zamianę 𝑚←𝑛, 𝑛←𝑟 i wróć do kroku1.
         
         while(abc%xyz!=0){      //sprawdza czy reszta to 0
                 
-                int r=abc%xyz;      //oblicza resztę z dzielenia
-                printf("%d\n",r);   
+                int r=abc%xyz;      //oblicza resztę z dzielenia 
                 abc=xyz;            //wykonuje zamianę abc←xyz
-                printf("%d\n",abc);
                 xyz=r;              //wykonuje zamianę xyz←r
-                printf("%d\n\n\n",xyz);
-            }
-        
-        
-        
+            } 
+            
     return 0;
 }
